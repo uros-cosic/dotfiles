@@ -1,0 +1,11 @@
+*
+
+!nvim/
+!nvim/**
+
+!ghostty/
+!ghostty/**
+
+!tmux/
+!tmux/**
+!.gitignore
