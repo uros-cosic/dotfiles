@@ -15,9 +15,6 @@ vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
 vim.opt.expandtab = true
 
--- Don't show mode
-vim.opt.showmode = false
-
 -- Wrapped lines continue indenting
 vim.opt.breakindent = true
 
@@ -56,7 +53,13 @@ vim.schedule(function()
 	vim.opt.clipboard = "unnamedplus"
 end)
 
+-- No cursor styling
+vim.opt.guicursor = ""
+
 -- KEYMAPS
+
+-- When error message is too long
+vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float)
 
 -- Use hjkl to move instead of arrows
 vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move"<CR>')
